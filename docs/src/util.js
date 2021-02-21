@@ -1,5 +1,5 @@
 
-  import {LitElement, html,css} from '../_snowpack/pkg/lit-element.js';
+  import {LitElement, html,css} from '../snpkgs/pkg/lit-element.js';
   
   //utility functions
   export function disp_box(e) {

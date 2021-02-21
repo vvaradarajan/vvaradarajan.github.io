@@ -16,6 +16,7 @@ module.exports = {
     port:8088
   },
   buildOptions: {
-    /* ... */
+    metaUrlPath:"snpkgs",
+    out:'docs'
   },
 };
