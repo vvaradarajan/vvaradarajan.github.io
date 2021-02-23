@@ -24,7 +24,7 @@
             font-family:"Times New Roman", Times, serif;  
             font-size: 20px; 
           }
-          .mobilemargin {margin-top:1em;width:80%;}  
+          .mobilemargin {margin-top:1em;width:80%;text-align: left;}  
         `;
       }
 
