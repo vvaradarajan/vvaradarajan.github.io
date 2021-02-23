@@ -15,14 +15,16 @@
     static get styles() {
         return css`
           .txtarearight {
-            float:left;z-index:1; margin-top:6em;
+            float:left;margin-top:6em;
             background-color: #54abed;border-radius: 25px;
             border-color: coral;
             border-width:2px;
             position:relative;
             padding:10px;
             font-family:"Times New Roman", Times, serif;  
-            font-size: 20px;   
+            font-size: 20px; 
+          }
+          .mobilemargin {margin-top:1em;}  
         `;
       }
 
@@ -36,18 +38,22 @@
     constructor() {
             super();
             this.prompt=''
+            this.mobile=window.innerWidth < 1024
     }
     showPrompt(promptKey) {
         this.prompt=TextAreaBlurb.telPrompts[promptKey]
         this.requestUpdate()
     }
     render() {
-        if (this.prompt)
-            return html `
-            <div class="txtarearight">
-            ${this.prompt}
-            </div>
+        if (this.prompt) {
+          let classVar="txtarearight"
+          if (this.mobile) classVar="txtarearight mobilemargin"
+          return html `
+          <div class="${classVar}">
+          ${this.prompt}
+          </div>
             `
+        }
         else return html ``
     }
   }
